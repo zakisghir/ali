@@ -1,13 +1,13 @@
 ﻿const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "#";
+var prefix = "$";
 client.on("message", message => {
 
-            if (message.content.startsWith(prefix + "obc")) {
+            if (message.content.startsWith(prefix + "za")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
-  message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
+  message.guild.members.filter(m => m.presence.status !== 'online').forEach(m => {
  m.send(`${argresult}\n ${m}`);
 })
  message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : عدد الاعضاء المستلمين`); 
@@ -23,7 +23,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Ali`,"http://twitch.tv/S-F")
+client.user.setGame(`Welcome server Hunter`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
