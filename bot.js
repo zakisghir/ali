@@ -1,9 +1,9 @@
 ﻿const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "$";
+var prefix = "%";
 client.on("message", message => {
 
-            if (message.content.startsWith(prefix + "za")) {
+            if (message.content.startsWith(prefix + "bc")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
@@ -23,7 +23,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Welcome server Hunter`,"http://twitch.tv/S-F")
+client.user.setGame(`Bot By: !Ģøuiĺa`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
